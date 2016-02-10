@@ -1,0 +1,44 @@
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+html {
+    background-color: #eee;
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+}
+
+.wrapper {
+    width: 40%;
+    margin: 5px auto 40px;
+    padding: 50px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.15);
+}
+
+.wrapper h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.wrapper img {
+    display: block;
+    margin: 0 auto;
+}
+
+.wrapper li {
+    padding: 5px 0;
+}
+
+.wrapper section {
+    border-top: 1px solid #000;
+}
+
+.wrapper section:first-of-type {
+    border: none;
+}
