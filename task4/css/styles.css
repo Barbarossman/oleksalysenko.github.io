@@ -1,0 +1,244 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+body {
+    background: url(../img/bg.jpg) 0 -38px;
+    font: 14px Tahoma, sans-serif;
+}
+
+.wrapper {
+    background: #fff;
+    -moz-box-shadow: 0 3px 8px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.5);
+    box-shadow: 0 3px 8px rgba(0,0,0,.5);
+}
+
+.wrapper, footer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.topbar {
+    height: 175px;
+    position: relative;
+    color: #128aa7;
+}
+
+.brand {
+    position: absolute;
+    bottom: 0;
+    left: 35px;
+}
+
+.brand p {
+    position: relative;
+    bottom: 55px;
+    text-align: center;
+}
+
+.contacts {
+    position: absolute;
+    top: 0;
+    right: 35px;
+}
+
+.links {
+    position: absolute;
+    bottom: 10px;
+    right: 35px;
+    font-size: 10px;
+}
+
+.links li {
+    display: inline;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.links li:first-child {
+    margin-left: 0;
+}
+
+.links li:last-child {
+    margin-right: 0;
+}
+
+.links a {
+    display: inline-block;
+    height: 55px;
+    min-width: 42px;
+    width: auto;
+    padding-top: 42px;
+    color: #128aa7;
+}
+
+.india {
+    background: url(../img/flags/i_flag.png) no-repeat center top;
+}
+.nepal {
+    background: url(../img/flags/n_flag.png) no-repeat center top;
+}
+.tibet {
+    background: url(../img/flags/t_flag.png) no-repeat  center top;
+}
+.bhutan {
+    background: url(../img/flags/b_flag.png) no-repeat center top;
+}
+.sri-lanka {
+    background: url(../img/flags/s_flag.png) no-repeat center top;
+}
+.maldives {
+    background: url(../img/flags/m_flag.png) no-repeat center top;
+}
+
+.header-bg {
+    height: 240px;
+    width: 100%;
+    background: url(../img/header-bg.png) no-repeat left;
+    background-size: cover;
+    border-bottom: 1px solid #128aa7;
+    border-top: 1px solid #128aa7;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    border-top: 1px solid #cacbcb;
+    background: rgb(48,48,48);
+    background: -webkit-linear-gradient(rgb(55,55,55), rgb(48,48,48));
+    background: -moz-linear-gradient(rgb(55,55,55), rgb(48,48,48));
+    background: -o-linear-gradient(rgb(55,55,55), rgb(48,48,48));
+    background: linear-gradient(rgb(55,55,55), rgb(48,48,48));
+    -webkit-box-shadow:0 1px 4px rgba(0,0,0,.8);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,.8);
+    box-shadow: 0 1px 4px rgba(0,0,0,.8);
+    position: relative;
+    text-align: center;
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.navbar > li {
+    float: left;
+    position: relative;
+}
+
+.navbar > li > a {
+    display: block;
+    padding: 8px 35px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 150px;
+    top: 32px;
+    left: 0;
+    padding: 0 5px 5px;
+    border-top: 1px solid #000;
+    background: rgb(48,48,48);
+    background: -webkit-linear-gradient(rgb(55,55,55), rgb(48,48,48));
+    background: -moz-linear-gradient(rgb(55,55,55), rgb(48,48,48));
+    background: -o-linear-gradient(rgb(55,55,55), rgb(48,48,48));
+    background: linear-gradient(rgb(55,55,55), rgb(48,48,48));
+    -moz-box-shadow: 0 3px 8px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.5);
+    box-shadow: 0 3px 8px rgba(0,0,0,.5);
+}
+
+.dropdown-menu > li {
+    display: block;
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 5px;
+}
+
+.navbar > li:hover .dropdown-menu {
+    display: block;
+}
+
+.caret {
+    display: inline-block;
+    background: url(../img/caret.png) top left;
+    width: 5px;
+    height: 6px;
+    margin-left: 5px;
+}
+
+.content {
+    overflow: hidden; /* the one true layout method for the same height columns */
+}
+
+.content aside {
+    width: 20%;
+    background: #edeef0;
+    border-right: 1px solid #c7cacf;
+    border-left: 1px solid #c7cacf;
+    margin-bottom: -99999px; /* the one true layout method for the same height columns */
+    padding-bottom: 99999px;
+}
+
+.content aside h2 {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    color: #424c43;
+}
+
+.content aside a {
+    display: block;
+    color: #424c43;
+    text-decoration: none;
+    padding: 0 0 5px 15px;
+}
+
+.content aside a:last-child {
+    padding-bottom: 15px;
+}
+
+.content .left-sidebar {
+    float: left;
+}
+
+.content .right-sidebar {
+    float: right;
+}
+
+.content article {
+    width: 60%;
+    float: left;
+    margin-bottom: -99999px;  /* the one true layout method for the same height columns */
+    padding-bottom: 99999px;
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+}
