@@ -24,6 +24,10 @@ body {
 a {
     text-decoration: none;
     color: #656363;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
 }
 
 .wrapper {
@@ -48,20 +52,25 @@ header nav {
 
 nav li {
     float: left;
+}
+
+nav a {
+    display: block;
     padding: 12px 30px;
     border-left: 1px solid transparent;
     border-right: 1px solid transparent;
+    position: relative;
 }
 
-nav li:first-child {
+nav li:first-child a {
     padding: 12px 50px 12px 35px;
 }
 
-nav li:nth-child(3) {
+nav li:nth-child(3) a {
     padding: 12px 50px;
 }
 
-header nav li:hover {
+header nav a:hover {
     border-left: 1px solid #838383;
     border-right: 1px solid #838383;
     background: rgb(47, 47, 47);
@@ -97,6 +106,7 @@ header a {
 
 .content-wrapper a:hover {
     padding-left: 30px;
+    background: #f9f9f9;
     color: #000;
 }
 
@@ -132,4 +142,8 @@ footer a:hover {
 
 .copyright {
     float: right;
+}
+
+.copyright li {
+    padding: 12px 30px;
 }
