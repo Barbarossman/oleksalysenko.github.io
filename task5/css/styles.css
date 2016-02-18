@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'TeX Gyre Heros';
+    src: url('../fonts/TexGyreHeros/TeXGyreHerosRegular.eot');
+    src: url('../fonts/TexGyreHeros/TeXGyreHerosRegular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TexGyreHeros/TeXGyreHerosRegular.woff2') format('woff2'),
+    url('../fonts/TexGyreHeros/TeXGyreHerosRegular.woff') format('woff'),
+    url('../fonts/TexGyreHeros/TeXGyreHerosRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+input,
+label {
+    cursor: pointer;
+}
+
+input {
+    font-family: inherit;
+}
+
+input[type=checkbox] {
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    outline: thin dotted \9;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)),
+    url(../img/bg.jpg) top 39px center no-repeat;
+}
+
+body {
+    font: 14px "TeX Gyre Heros", Arial, sans-serif;
+    letter-spacing: 1px;
+    color: #ccc;
+}
+
+header nav {
+    background: #074f8f;
+    position: relative;
+}
+
+header nav:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 39px;
+    z-index: 1;
+    opacity: 0.1;
+    background-image: url('../img/bg-nav.png');
+}
+
+header ul {
+    display: inline-block;
+    float: right;
+    position: relative;
+    z-index: 10;
+}
+
+header li {
+    display: inline-block;
+}
+
+header li a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.navbar {
+    position: relative;
+}
+
+.navbar a {
+    padding: 10px;
+    color: #4f9ed7;
+}
+
+.navbar .active a {
+    color: #fff;
+    background-color: #4eabda;
+}
+
+.divider {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    bottom: 10%;
+    border-left: 1px solid #56a2dc;
+}
+
+.navbar-right {
+    padding-right: 10px;
+}
+
+.navbar-right li {
+    padding: 10px;
+    color: #fff;
+}
+
+.navbar-right a {
+    color: #fff;
+}
+
+.navbar-right .icon-left {
+    padding-left: 50px;
+    background: url(../img/icon-flag.png) no-repeat left 20px center;
+}
+
+.navbar-right li:last-child {
+    border: #4299d2;
+    background: #4299d2;
+    background: -webkit-linear-gradient(rgb(81, 177, 220), rgb(46, 122, 196));
+    background: -moz-linear-gradient(rgb(81, 177, 220), rgb(46, 122, 196));
+    background: -o-linear-gradient(rgb(81, 177, 220), rgb(46, 122, 196));
+    background: linear-gradient(rgb(81, 177, 220), rgb(46, 122, 196));
+    position: relative;
+    z-index: 10;
+}
+
+.navbar-right li:last-child a {
+    text-decoration: underline;
+}
+
+.signup-modal {
+    width: 560px;
+    position: absolute;
+    left: 50%;
+    top: 240px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-bottom: 200px;
+}
+
+.modal-header {
+    background: rgba(0, 0, 0, .6);
+    padding: 20px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.modal-body {
+    background: rgba(0, 0, 0, .6);
+    padding: 20px 120px 20px;
+}
+
+.modal-body p {
+    text-align: center;
+}
+
+.login-fb {
+    display: block;
+    height: 35px;
+    background: url(../img/fb-button.png) no-repeat center center;
+
+}
+
+.horizontal-divider {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.horizontal-divider span:before,
+.horizontal-divider span:after {
+    content: "";
+    display: inline-block;
+    width: 37%;
+    margin: 0 10px 0 -55%;
+    vertical-align: middle;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #000;
+}
+
+.horizontal-divider span:after {
+    margin: 0 -55% 0 10px;
+}
+
+.horizontal-divider span {
+    overflow: hidden;
+}
+
+.control-group {
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+
+.text-input {
+    font-size: 14px;
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    border-bottom: 1px solid #4c4c4c;
+    background: rgb(20, 19, 19);
+    background: -webkit-linear-gradient(rgb(20, 19, 19), rgb(20, 20, 20));
+    background: -moz-linear-gradient(rgb(20, 19, 19), rgb(20, 20, 20));
+    background: -o-linear-gradient(rgb(20, 19, 19), rgb(20, 20, 20));
+    background: linear-gradient(rgb(20, 19, 19), rgb(20, 20, 20));
+    letter-spacing: 1px;
+}
+
+.text-input:focus {
+    color: #fff;
+    background: rgb(33, 77, 121);
+    background: -webkit-linear-gradient(rgb(33, 77, 121), rgb(31, 83, 132));
+    background: -moz-linear-gradient(rgb(33, 77, 121), rgb(31, 83, 132));
+    background: -o-linear-gradient(rgb(33, 77, 121), rgb(31, 83, 132));
+    background: linear-gradient(rgb(33, 77, 121), rgb(31, 83, 132));
+    -webkit-box-shadow: 0 0 8px 2px rgb(108, 158, 208);
+    -moz-box-shadow: 0 0 8px 2px rgb(108, 158, 208);
+    box-shadow: 0 0 8px 2px rgb(108, 158, 208);
+    border-bottom: none;
+}
+
+.text-input:focus::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.text-input:focus:-moz-placeholder {
+    color: #fff;
+}
+
+.text-input:focus::-moz-placeholder {
+    color: #fff;
+}
+
+.text-input:focus:-ms-input-placeholder {
+    color: #fff;
+}
+
+.btn {
+    display: block;
+    padding: 8px 12px;
+    margin: 0 auto 15px;
+    border: 1px solid #4b7fa1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: rgb(103, 198, 230);
+    background: -webkit-linear-gradient(rgb(103, 198, 230), rgb(54, 134, 202));
+    background: -moz-linear-gradient(rgb(103, 198, 230), rgb(54, 134, 202));
+    background: -o-linear-gradient(rgb(103, 198, 230), rgb(54, 134, 202));
+    background: linear-gradient(rgb(103, 198, 230), rgb(54, 134, 202));
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+}
