@@ -36,7 +36,8 @@ label {
     cursor: pointer;
 }
 
-input:focus {
+input:focus,
+select {
     outline: none;
     outline: thin dotted \9;
 }
@@ -299,6 +300,180 @@ header nav {
     padding-right: 5px;
     font-size: 12px;
     color: #8a9296;
+}
+
+/* Filters */
+
+.filters {
+    margin-bottom: 15px;
+}
+
+.filters > div {
+    float: left;
+    padding: 0 15px 10px;
+    border: 1px solid #d1d1d1;
+    -webkit-box-shadow: 1px 1px 6px #b3b3b3;
+    -moz-box-shadow: 1px 1px 6px #b3b3b3;
+    box-shadow: 1px 1px 6px #b3b3b3;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.filters h5,
+.filters h6 {
+    font-family: "Arial black", Arial, sans-serif;
+    color: #154467;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.filters h5 {
+    font-size: 12px;
+}
+
+.filters .form-group {
+    margin-bottom: 4px;
+}
+
+.filters .form-group label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70px;
+    font-size: 10px;
+    color: #000;
+}
+
+.filters .form-group label span {
+    color: #77858b;
+}
+
+.filters .form-group select {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding-right: 5px;
+    height: 17px;
+    min-width: 45px;
+    background: url(../img/select-left.png) left top no-repeat,
+    url(../img/select-right.png) right top no-repeat,
+    url(../img/select-middle.png) left 5px top repeat-x;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.filters .btn-search {
+    float: right;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-style: italic;
+    color: #154467;
+    text-decoration: underline;
+}
+
+.search-by-auto {
+    position: relative;
+    width: 416px;
+    margin: 0 12px 0 4px;
+}
+
+.search-by-auto h5 {
+    text-align: center;
+}
+
+.search-by-auto h6 {
+    font-size: 10px;
+    text-transform: capitalize;
+    position: absolute;
+    top: 5px;
+}
+
+.tires h6 {
+    right: 15px;
+    top: 2px;
+}
+
+.wheels h6 {
+    left: 20px;
+    top: 4px;
+}
+
+.wheels {
+    width: 50%;
+    float: left;
+}
+
+.tires {
+    width: auto;
+    float: right;
+}
+
+.search-tires {
+    width: 191px;
+}
+
+.search-tires .form-group > label {
+    width: 40px;
+}
+
+.search-tires input[type='checkbox'] {
+    display: none;
+}
+
+.search-tires input[type='checkbox'] + label span {
+    display: inline-block;
+    width: 11px;
+    height: 10px;
+    vertical-align: middle;
+    background:url(../img/checkbox.png) left top no-repeat;
+    cursor:pointer;
+}
+
+.search-tires .form-group:last-child {
+    display: inline-block;
+}
+
+.search-tires .checkbox-group {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.search-tires .checkbox-group input[type=checkbox] {
+    position: relative;
+    vertical-align: middle;
+    bottom: 1px;
+    margin: 0;
+}
+
+.filters .search-wheels {
+    width: 266px;
+    float: right;
+    margin-right: 5px;
+}
+
+.search-wheels .form-group label {
+    width: 85px;
+}
+
+.search-wheels .left {
+    width: 65%;
+    float: left;
+}
+
+.search-wheels .right {
+    width: 35%;
+    float: right;
+    padding-left: 10px;
+    border-left: 1px solid #bdc6ca;
+}
+
+.wheels-search .right label {
+    width: 65px;
 }
 
 /* Main content */

@@ -66,6 +66,247 @@
         </ul>
     </nav>
 </header>
+<section class="filters clearfix">
+    <div class="search-by-auto">
+        <h5>Поиск по автомобилю</h5>
+
+        <form action="" method="get">
+            <div class="wheels">
+                <h6>диски</h6>
+                <fieldset class="form-group">
+                    <label for="brand">
+                        Марка <span>авто:</span>
+                    </label>
+                    <select name="brand" id="brand">
+                        <option></option>
+                        <option value="1">Lorem Ipsum</option>
+                        <option value="2">Lorem Ipsum</option>
+                        <option value="3">Lorem Ipsum</option>
+                        <option value="4">Lorem Ipsum</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="model">
+                        Модель <span>автомобиля:</span>
+                    </label>
+                    <select name="model" id="model">
+                        <option></option>
+                        <option value="1">Lorem Ipsum</option>
+                        <option value="2">Lorem Ipsum</option>
+                        <option value="3">Lorem Ipsum</option>
+                        <option value="4">Lorem Ipsum</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="year">
+                        Год выпуска <span>автомобиля:</span>
+                    </label>
+                    <select name="year" id="year">
+                        <option></option>
+                        <option value="1">2013</option>
+                        <option value="2">2014</option>
+                        <option value="3">2015</option>
+                        <option value="4">2016</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="equipment">
+                        Комплектация:
+                    </label>
+                    <select name="equipment" id="equipment">
+                        <option></option>
+                        <option value="1">Lorem Ipsum</option>
+                        <option value="2">Lorem Ipsum</option>
+                        <option value="3">Lorem Ipsum</option>
+                        <option value="4">Lorem Ipsum</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div class="tires">
+                <h6>шины</h6>
+                <fieldset class="form-group">
+                    <label>
+                        Марка <span>авто:</span>
+                    </label>
+                    <select name="brand" class="form-control">
+                        <option></option>
+                        <option value="1">Lorem Ipsum</option>
+                        <option value="2">Lorem Ipsum</option>
+                        <option value="3">Lorem Ipsum</option>
+                        <option value="4">Lorem Ipsum</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>
+                        Модель <span>автомобиля:</span>
+                    </label>
+                    <select name="model" class="form-control">
+                        <option></option>
+                        <option value="1">Lorem Ipsum</option>
+                        <option value="2">Lorem Ipsum</option>
+                        <option value="3">Lorem Ipsum</option>
+                        <option value="4">Lorem Ipsum</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>
+                        Год выпуска <span>автомобиля:</span>
+                    </label>
+                    <select name="year" class="form-control">
+                        <option></option>
+                        <option value="1">2013</option>
+                        <option value="2">2014</option>
+                        <option value="3">2015</option>
+                        <option value="4">2016</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>
+                        Комплектация:
+                    </label>
+                    <select name="equipment" class="form-control">
+                        <option></option>
+                        <option value="1">Lorem Ipsum</option>
+                        <option value="2">Lorem Ipsum</option>
+                        <option value="3">Lorem Ipsum</option>
+                        <option value="4">Lorem Ipsum</option>
+                    </select>
+                </fieldset>
+            </div>
+            <input type="submit" class="btn-search" value="поиск..."/>
+        </form>
+    </div>
+    <div class="search-tires">
+        <h5>поиск шин</h5>
+
+        <form method="get" action="">
+            <fieldset class="form-group">
+                <label for="size">
+                    Размер
+                </label>
+                <select name="size" id="size">
+                    <option value="1">145</option>
+                    <option value="2">145</option>
+                    <option value="3">145</option>
+                    <option value="4">145</option>
+                </select>
+                /
+                <select name="size1">
+                    <option></option>
+                    <option value="1">30</option>
+                    <option value="2">30</option>
+                    <option value="3">30</option>
+                    <option value="4">30</option>
+                </select>
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="radius">
+                    R
+                </label>
+                <select name="radius" id="radius">
+                    <option value="1">12</option>
+                    <option value="2">12</option>
+                    <option value="3">12</option>
+                    <option value="4">12</option>
+                </select>
+            </fieldset>
+            <fieldset class="form-group">
+                <label>Сезон:</label>
+
+                <div class="checkbox-group">
+                    <div class="checkbox">
+                        <input type="checkbox" name="summer"/>
+                        <label>
+                            <span></span>
+                            лето
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="winter"/>
+                        <label>
+                            <span></span>
+                            зима
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="all"/>
+                        <label>
+                            <span></span>
+                            всесез
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <input type="submit" class="btn-search" value="поиск..."/>
+        </form>
+    </div>
+    <div class="search-wheels">
+        <h5>поиск дисков</h5>
+
+        <form method="get" action="">
+            <div class="left">
+                <fieldset class="form-group">
+                    <label for="diameter">
+                        Диаметр <span>диска:</span>
+                    </label>
+                    <select name=diameter"" id="diameter">
+                        <option value="1">14</option>
+                        <option value="2">14</option>
+                        <option value="3">14</option>
+                        <option value="4">14</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="quantity">
+                        Количество <span>крепежных отверстий:</span>
+                    </label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">3</option>
+                        <option value="2">3</option>
+                        <option value="3">3</option>
+                        <option value="4">3</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="diameter1">
+                        Диаметр <span>расположения крепежных отверстий:</span>
+                    </label>
+                    <select name="diameter1" id="diameter1">
+                        <option value="1">12</option>
+                        <option value="2">12</option>
+                        <option value="3">12</option>
+                        <option value="4">12</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div class="right">
+                <fieldset class="form-group">
+                    <label for="diameter2">
+                        ДЦО <span>(диаметр центрального отверстия):</span>
+                    </label>
+                    <select name="diameter2" id="diameter2">
+                        <option value="1">12</option>
+                        <option value="2">12</option>
+                        <option value="3">12</option>
+                        <option value="4">12</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="et">
+                        ЕТ <span>(вылет диска):</span>
+                    </label>
+                    <select name="et" id="et">
+                        <option value="1">12</option>
+                        <option value="2">12</option>
+                        <option value="3">12</option>
+                        <option value="4">12</option>
+                    </select>
+                </fieldset>
+            </div>
+            <input type="submit" class="btn-search" value="поиск..."/>
+        </form>
+    </div>
+</section>
 <section class="catalog clearfix">
     <aside class="left-sidebar filters">
         <h2>Каталог продукции:</h2>
@@ -130,7 +371,7 @@
             <p><a href="#">ultra grip extreme</a></p>
 
             <div class="img-container">
-                <img src="img/wheel1.png" alt=""/>
+                <img src="img/catalogue/wheel1.png" alt=""/>
             </div>
             <figcaption>90.00 грн.</figcaption>
         </figure>
@@ -140,7 +381,7 @@
             <p><a href="#">hakkapeliitta r</a></p>
 
             <div class="img-container">
-                <img src="img/wheel2.png" alt=""/>
+                <img src="img/catalogue/wheel2.png" alt=""/>
             </div>
             <figcaption>115.00 грн.</figcaption>
         </figure>
@@ -150,7 +391,7 @@
             <p><a href="#">k 708 155/65 r14</a></p>
 
             <div class="img-container">
-                <img src="img/wheel3.png" alt=""/>
+                <img src="img/catalogue/wheel3.png" alt=""/>
             </div>
             <figcaption>393.00 грн.</figcaption>
         </figure>
@@ -160,7 +401,7 @@
             <p><a href="#">ultra grip extreme</a></p>
 
             <div class="img-container">
-                <img src="img/wheel1.png" alt=""/>
+                <img src="img/catalogue/wheel1.png" alt=""/>
             </div>
             <figcaption>90.00 грн.</figcaption>
         </figure>
@@ -170,7 +411,7 @@
             <p><a href="#">hakkapeliitta r</a></p>
 
             <div class="img-container">
-                <img src="img/wheel2.png" alt=""/>
+                <img src="img/catalogue/wheel2.png" alt=""/>
             </div>
             <figcaption>115.00 грн.</figcaption>
         </figure>
@@ -180,7 +421,7 @@
             <p><a href="#">k 708 155/65 r14</a></p>
 
             <div class="img-container">
-                <img src="img/wheel3.png" alt=""/>
+                <img src="img/catalogue/wheel3.png" alt=""/>
             </div>
             <figcaption>393.00 грн.</figcaption>
         </figure>
@@ -190,7 +431,7 @@
             <p><a href="#">ultra grip extreme</a></p>
 
             <div class="img-container">
-                <img src="img/wheel1.png" alt=""/>
+                <img src="img/catalogue/wheel1.png" alt=""/>
             </div>
             <figcaption>90.00 грн.</figcaption>
         </figure>
@@ -200,7 +441,7 @@
             <p><a href="#">hakkapeliitta r</a></p>
 
             <div class="img-container">
-                <img src="img/wheel2.png" alt=""/>
+                <img src="img/catalogue/wheel2.png" alt=""/>
             </div>
             <figcaption>115.00 грн.</figcaption>
         </figure>
@@ -210,7 +451,7 @@
             <p><a href="#">k 708 155/65 r14</a></p>
 
             <div class="img-container">
-                <img src="img/wheel3.png" alt=""/>
+                <img src="img/catalogue/wheel3.png" alt=""/>
             </div>
             <figcaption>393.00 грн.</figcaption>
         </figure>
