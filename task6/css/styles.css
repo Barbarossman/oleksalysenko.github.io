@@ -23,7 +23,8 @@ a {
 }
 
 a,
-input {
+input,
+span {
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
@@ -317,6 +318,11 @@ header nav {
     font-size: 12px;
 }
 
+.navbar-right a:hover span,
+.navbar-right a:focus span {
+    color: #6b6b6b;
+}
+
 .navbar-right li:nth-of-type(1) a {
     padding: 4px 5px 4px 8px;
 }
@@ -414,7 +420,7 @@ header nav {
 
 .filters .btn-search:hover,
 .filters .btn-search:focus {
-    color: #000;
+    color: #8a9296;
 }
 
 .search-by-auto {
@@ -596,6 +602,13 @@ header nav {
     display: block;
     line-height: 13px;
     text-transform: capitalize;
+}
+
+.results figure h3 a:hover,
+.results figure h3 a:focus,
+.results figure p a:hover,
+.results figure p a:focus {
+    color: #52abcb;
 }
 
 .results figcaption {
