@@ -24,10 +24,10 @@ a {
 
 a,
 input {
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
 }
 
 input,
@@ -53,7 +53,7 @@ body {
 
 .topbar {
     position: relative;
-    margin: 17px 0 11px;
+    margin: 17px 0 10px;
 }
 
 .topbar li {
@@ -140,9 +140,9 @@ body {
     background: -moz-linear-gradient(rgb(31, 103, 135), rgb(12, 51, 87));
     background: -o-linear-gradient(rgb(31, 103, 135), rgb(12, 51, 87));
     background: linear-gradient(rgb(31, 103, 135), rgb(12, 51, 87));
-    -webkit-box-shadow: 1px 3px 4px rgb(185,185,185);
-    -moz-box-shadow: 1px 3px 4px rgb(185,185,185);
-    box-shadow: 1px 3px 4px rgb(185,185,185);
+    -webkit-box-shadow: 1px 3px 4px rgb(185, 185, 185);
+    -moz-box-shadow: 1px 3px 4px rgb(185, 185, 185);
+    box-shadow: 1px 3px 4px rgb(185, 185, 185);
 }
 
 .login-form:before {
@@ -220,14 +220,16 @@ body {
     font-size: 11px;
 }
 
-.login-form a:first-of-type {
-    padding-right: 20px;
+.login-form a:last-of-type {
+    padding-left: 15px;
+    color: #bfbfbf;
+    font-size: 12px;
+    text-decoration: underline;
 }
 
 .login-form .btn:hover,
 .login-form a:hover {
-    color: #bfbfbf;
-    text-decoration: underline;
+    color: #6b6b6b;
 }
 
 .banner {
@@ -243,10 +245,10 @@ header nav {
     position: relative;
     border: #0d1642;
     background: rgb(58, 64, 70);
-    background: -webkit-linear-gradient(rgb(77,86,99) 10%, rgb(45,50,54) 15%, rgb(1,1,1) 100%);
-    background: -moz-linear-gradient(rgb(77,86,99) 10%, rgb(45,50,54) 15%, rgb(1,1,1) 100%);
-    background: -o-linear-gradient(rgb(77,86,99) 10%, rgb(45,50,54) 15%, rgb(1,1,1) 100%);
-    background: linear-gradient(rgb(77,86,99) 10%, rgb(45,50,54) 15%, rgb(1,1,1) 100%);
+    background: -webkit-linear-gradient(rgb(77, 86, 99) 10%, rgb(45, 50, 54) 15%, rgb(1, 1, 1) 100%);
+    background: -moz-linear-gradient(rgb(77, 86, 99) 10%, rgb(45, 50, 54) 15%, rgb(1, 1, 1) 100%);
+    background: -o-linear-gradient(rgb(77, 86, 99) 10%, rgb(45, 50, 54) 15%, rgb(1, 1, 1) 100%);
+    background: linear-gradient(rgb(77, 86, 99) 10%, rgb(45, 50, 54) 15%, rgb(1, 1, 1) 100%);
     -webkit-box-shadow: 3px 3px 5px #333;
     -moz-box-shadow: 3px 3px 5px #333;
     box-shadow: 3px 3px 5px #333;
@@ -260,7 +262,7 @@ header nav {
 
 .navbar {
     position: relative;
-    left: 123px;
+    left: 126px;
 }
 
 .navbar a {
@@ -270,6 +272,13 @@ header nav {
     text-transform: uppercase;
     color: #b1bcc0;
     border: 1px solid transparent;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+}
+
+.navbar li.active a {
+    padding: 4px 14px 4px 20px;
 }
 
 .navbar li.active a,
@@ -280,15 +289,23 @@ header nav {
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
     border-radius: 16px;
-    background: -webkit-linear-gradient(rgb(31,103,135), rgb(12, 51, 87));
+    background: -webkit-linear-gradient(rgb(31, 103, 135), rgb(12, 51, 87));
     background: -moz-linear-gradient(rgb(31, 103, 135), rgb(12, 51, 87));
     background: -o-linear-gradient(rgb(31, 103, 135), rgb(12, 51, 87));
     background: linear-gradient(rgb(31, 103, 135), rgb(12, 51, 87));
 }
 
+.navbar li:nth-child(3) a {
+    padding: 4px 12px 4px 12px;
+}
+
+.navbar li:last-child a {
+    padding-left: 8px;
+}
+
 .navbar-right {
     position: absolute;
-    right: 10px;
+    right: 5px;
     padding-left: 20px;
     background: url(../img/icons/icon-shopping-cart.png) no-repeat top 5px left;
     font-family: Arial, sans-serif;
@@ -296,9 +313,20 @@ header nav {
 
 .navbar-right a {
     display: inline-block;
-    padding: 4px 10px;
     color: #0d5a8f;
     font-size: 12px;
+}
+
+.navbar-right li:nth-of-type(1) a {
+    padding: 4px 5px 4px 8px;
+}
+
+.navbar-right li:nth-of-type(2) a {
+    padding: 4px 11px 4px 10px;
+}
+
+.navbar-right li:nth-of-type(2) span {
+    padding-right: 13px;
 }
 
 .navbar-right a span {
@@ -384,6 +412,11 @@ header nav {
     text-decoration: underline;
 }
 
+.filters .btn-search:hover,
+.filters .btn-search:focus {
+    color: #000;
+}
+
 .search-by-auto {
     position: relative;
     width: 416px;
@@ -429,8 +462,16 @@ header nav {
     width: 38px;
 }
 
+.search-tires .checkbox {
+    position: relative;
+}
+
 .search-tires input[type='checkbox'] {
-    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 2px;
+    left: -5px;
+    z-index: 10;
 }
 
 .search-tires input[type='checkbox'] + label span {
@@ -438,8 +479,19 @@ header nav {
     width: 11px;
     height: 10px;
     vertical-align: middle;
-    background:url(../img/filters/checkbox.png) left top no-repeat;
-    cursor:pointer;
+    background: url(../img/filters/checkbox.png) left top no-repeat;
+    cursor: pointer;
+}
+
+.search-tires input[type='checkbox']:checked + label span:after {
+    content: '✓';
+    position: absolute;
+    bottom: 1px;
+    left: 2px;
+    z-index: 1;
+    font-size: 15px;
+    height: 100%;
+    color: #000;
 }
 
 .search-tires .form-group:last-child {
@@ -518,7 +570,7 @@ header nav {
 }
 
 .results .img-container {
-    padding: 1px 0 1px 0;
+    padding: 2px 0;
     background: #fff;
     border: 1px solid #aab3b6;
     -webkit-border-radius: 8px;
@@ -528,9 +580,9 @@ header nav {
 
 .results figure h3 a {
     color: #206988;
-    font-size: 16px;
+    font-size: 14px;
     display: block;
-    line-height: 16px;
+    line-height: 14px;
     font-weight: bold;
 }
 
@@ -559,7 +611,7 @@ header nav {
     text-transform: uppercase;
     color: #114165;
     padding: 2px 0 2px 25px;
-    margin: 4px 0 13px;
+    margin: 3px 0 13px;
     border: 1px solid #818b8f;
     -webkit-border-radius: 28px;
     -moz-border-radius: 28px;
@@ -612,7 +664,7 @@ header nav {
 }
 
 .catalog .right-sidebar h2 {
-    margin: 1px 0 16px;
+    margin: 1px 0 15px;
     padding: 2px 0 2px 30px;
 }
 
@@ -629,13 +681,18 @@ header nav {
     padding: 4px 0 2px 35px;
     font-size: 13px;
     color: #465961;
+    position: relative;
 }
 
-.right-sidebar .checkbox input[type='checkbox'] {
-    display: none;
+.right-sidebar input[type='checkbox'] {
+    opacity: 0;
+    position: absolute;
+    z-index: 10;
+    top: 7px;
+    left: 24px;
 }
 
-.right-sidebar .checkbox input[type='checkbox'] + label span {
+.right-sidebar input[type='checkbox'] + label span {
     display: inline-block;
     width: 11px;
     height: 11px;
@@ -644,6 +701,17 @@ header nav {
     vertical-align: middle;
     background: url(../img/checkbox.png) left top no-repeat;
     cursor: pointer;
+}
+
+.right-sidebar input[type="checkbox"]:checked + label span:after {
+    content: '✔';
+    position: absolute;
+    bottom: 7px;
+    left: 2px;
+    z-index: 1;
+    font-size: 15px;
+    height: 100%;
+    color: #465961;
 }
 
 .right-sidebar .btn {
@@ -666,8 +734,14 @@ header nav {
     text-transform: uppercase;
 }
 
+.right-sidebar .btn:hover,
+.right-sidebar .btn:focus {
+    opacity: 0.8;
+    color: #fff;
+}
+
 .brands {
-    margin: 42px 0 15px 0;
+    margin: 40px 0 15px 0;
     text-align: center;
 }
 
@@ -679,6 +753,11 @@ header nav {
 .brands a {
     display: inline-block;
     vertical-align: top;
+}
+
+.brands li:nth-child(6) a {
+    position: relative;
+    top: -3px;
 }
 
 /* Footer */
@@ -712,8 +791,8 @@ footer li:first-child:before {
 
 footer a {
     display: inline-block;
-    padding: 10px 6px;
-    font-size: 13px;
+    padding: 11px 7px 10px 9px;
+    font-size: 12px;
     color: #bec6c9;
 }
 
@@ -723,7 +802,7 @@ footer .active a {
 }
 
 .copyright {
-    font-size: 11px;
+    font-size: 10px;
     color: #7f4740;
     padding-top: 3px;
 }
