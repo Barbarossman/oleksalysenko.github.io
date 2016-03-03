@@ -1091,11 +1091,7 @@ footer {
     }
 
     .header-slider--prev {
-        left: 0;
-    }
-
-    .header-slider--next {
-        right: 0;
+        left: -5%;
     }
 
     .header-slider--pagination {
