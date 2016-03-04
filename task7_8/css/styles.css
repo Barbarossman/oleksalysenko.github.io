@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,800,400italic);
-
 @font-face {
     font-family: 'League Gothic';
     src: url('../fonts/LeagueGothic/LeagueGothicRegular.eot');
@@ -29,10 +27,6 @@
     clear: both;
 }
 
-.clearfix {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
-
 img {
     display: inline-block;
     max-width: 100%;
@@ -57,6 +51,7 @@ body {
 
 p {
     font: 16px 'Open Sans', sans-serif;
+    font-weight: 300;
     text-transform: none;
     line-height: 24px;
 }
@@ -96,7 +91,8 @@ header {
 }
 
 .header-slider {
-    background: rgba(0, 0, 0, .2);
+    background: none; /* IE8 fallback */
+    background: rgba(0,0,0,.2);
     position: relative;
 }
 
@@ -126,6 +122,11 @@ header {
     background: url(../img/slider/slider-navigation.png) no-repeat 0 0;
 }
 
+.header-slider__navigation:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE8 fallback */
+    opacity: .5;
+}
+
 .header-slider--prev {
     left: 0;
 }
@@ -140,6 +141,7 @@ header {
     padding: 77px 0 68px;
     border-top: 1px solid #0d151b;
     border-bottom: 1px solid #495e6d;
+    background: rgb(116, 80, 131); /* IE8 fallback */
     background: -webkit-linear-gradient(rgb(116, 80, 131), rgb(50, 37, 57));
     background: -moz-linear-gradient(rgb(116, 80, 131), rgb(50, 37, 57));
     background: -o-linear-gradient(rgb(116, 80, 131), rgb(50, 37, 57));
@@ -205,6 +207,13 @@ header {
     1px -3px 15px #fff;
 }
 
+.ie8 .about__link:hover,
+.ie8 .about__link:focus,
+.ie9 .about__link:hover,
+.ie9 .about__link:focus {
+    color: #edbfff; /* IE fallback */
+}
+
 .main-info {
     background: #f9f9f9;
     padding: 100px 0 80px;
@@ -264,6 +273,10 @@ header {
     transform: translateY(-50%);
 }
 
+.ie8 .blogpost-updates__img {
+    top: 25%;
+}
+
 .blogpost-updates__text {
     padding: 10px 0 10px 65px;
 }
@@ -308,7 +321,9 @@ header {
 
 .brands__link:hover,
 .brands__link:focus {
-    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; /* IE 8 */
+    opacity: .7;
+
 }
 
 .brands__link--billabong {
@@ -445,11 +460,12 @@ footer {
     width: 17px;
     height: 17px;
     margin-right: 2px;
-    background: rgba(0, 0, 0, .4);
+    background: rgb(128,128,128);
+    background: rgba(0,0,0,.4);
 }
 
-.slider__control:hover::before,
-.active-control .slider__control::before {
+.slider__control:hover:before,
+.active-control .slider__control:before {
     content: ' ';
     display: block;
     position: absolute;
@@ -460,8 +476,8 @@ footer {
     z-index: 1;
 }
 
-.header-slider--pagination .slider__control:hover::before,
-.active-control--header-slider .slider__control::before {
+.header-slider--pagination .slider__control:hover:before,
+.active-control--header-slider .slider__control:before {
     background: url(../img/slider/slider-pagination.png) no-repeat -15px 0;
 }
 
@@ -473,8 +489,8 @@ footer {
     border: 1px solid #f0f0f0;
 }
 
-.testimonials-slider--pagination .slider__control:hover::before,
-.active-control--testimonials-slider .slider__control::before {
+.testimonials-slider--pagination .slider__control:hover:before,
+.active-control--testimonials-slider .slider__control:before {
     background: url(../img/slider/slider-pagination.png) no-repeat 1px 0;
 }
 
@@ -529,6 +545,7 @@ footer {
 
     .navbar-sm:hover .navbar-sm__selected,
     .navbar-sm:focus .navbar-sm__selected {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE8 fallback */
         opacity: 0;
     }
 
@@ -1116,8 +1133,8 @@ footer {
         padding: 28px 25px 35px 37px;
     }
 
-    .testimonials-slider__item::before,
-    .testimonials-slider__item::after {
+    .testimonials-slider__item:before,
+    .testimonials-slider__item:after {
         position: absolute;
         right: 9%;
         width: 0;
@@ -1127,7 +1144,7 @@ footer {
         border: solid transparent;
     }
 
-    .testimonials-slider__item::before {
+    .testimonials-slider__item:before {
         border-left: 20px solid transparent;
         border-right: 3px solid #f6f6f6;
         border-top: 19px solid #f6f6f6;
@@ -1205,10 +1222,6 @@ footer {
     footer {
         padding: 45px 0 50px;
         background: url(../img/footer-bg-960.jpg);
-    }
-
-    .footer--navbar {
-        float: left;
     }
 
     .copyright {
