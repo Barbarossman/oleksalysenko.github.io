@@ -1,0 +1,51 @@
+body {
+    background: #ffab91;
+}
+
+header {
+    padding: 75px 0;
+    background: #ff9e80;
+    font-size: 36px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.content {
+    padding: 75px 0;
+    color: #fff;
+}
+
+.counter {
+    font-size: 48px;
+}
+
+.controls {
+    padding-top: 50px;
+}
+
+.results {
+    font-size: 24px;
+}
+
+.light {
+    color: #ffab91;
+}
+
+.dark {
+    color: #ff9e80;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+    font-size: 18px;
+}
+.material-icons.md-24 {
+    font-size: 24px;
+}
+.material-icons.md-36 {
+    font-size: 36px;
+}
+.material-icons.md-48 {
+    font-size: 48px;
+}
