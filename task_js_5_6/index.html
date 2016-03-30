@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col s1 offset-s3 right-align">
+                <i class="material-icons md-48 light">date_range</i>
+            </div>
+            <div class="col s4 present-day"></div>
+        </div>
+    </div>
+</header>
+<div class="content center-align container">
+    <div class="row counter">
+        <div class="col s2 offset-s2" id="hours">00</div>
+        <div class="col s2 center-align" id="minutes">00</div>
+        <div class="col s2 center-align" id="seconds">00</div>
+        <div class="col s2 center-align" id="milliseconds">000</div>
+    </div>
+    <div class="row">
+        <div class="col s2 offset-s2">Hours</div>
+        <div class="col s2 center-align">Minutes</div>
+        <div class="col s2 center-align">Seconds</div>
+        <div class="col s2 center-align">Milliseconds</div>
+    </div>
+    <div class="row controls">
+        <div class="col s2 offset-s3">
+            <a href="#!" id="start" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="start">
+                <i class="material-icons white-text md-48">play_arrow</i>
+            </a>
+            <a href="#!" id="stop" class="tooltipped hide" data-position="bottom" data-delay="50" data-tooltip="stop">
+                <i class="material-icons white-text md-48">stop</i>
+            </a>
+        </div>
+        <div class="col s2">
+            <a href="#!" id="split" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="split">
+                <i class="material-icons white-text md-48">check</i>
+            </a>
+        </div>
+        <div class="col s2">
+            <a href="#!" id="reset" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="reset">
+                <i class="material-icons white-text md-48">clear</i>
+            </a>
+        </div>
+    </div>
+    <div class="row results"></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
