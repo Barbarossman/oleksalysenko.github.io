@@ -1,67 +1,149 @@
-var pageContent = {
-  addContainer: function() {
-    var div = document.createElement('div');
-    div.classList.add('container');
-    div.style.paddingTop = '20px';
-    document.body.insertBefore(div, document.body.firstChild);
+var Test = {
+
+  questions: [
+    {
+      text: 'Вопрос №1',
+      answers: [
+        {
+          text: 'Вариант ответа 1',
+          correct: true
+        },
+        {
+          text: 'Вариант ответа 2',
+          correct: false
+        },
+        {
+          text: 'Вариант ответа 3',
+          correct: false
+        }
+      ]
+    },
+    {
+      text: 'Вопрос №2',
+      answers: [
+        {
+          text: 'Вариант ответа 1',
+          correct: false
+        },
+        {
+          text: 'Вариант ответа 2',
+          correct: true
+        },
+        {
+          text: 'Вариант ответа 3',
+          correct: false
+        }
+      ]
+    },
+    {
+      text: 'Вопрос №3',
+      answers: [
+        {
+          text: 'Вариант ответа 1',
+          correct: false
+        },
+        {
+          text: 'Вариант ответа 2',
+          correct: false
+        },
+        {
+          text: 'Вариант ответа 3',
+          correct: true
+        }
+      ]
+    }
+  ],
+
+  createElement: function (elem, cls, text) {
+    var element = document.createElement(elem);
+
+
+    if (cls) {
+      var classes = cls.split(' ');
+
+      for (var i = 0; i < classes.length; i++) {
+        element.classList.add(classes[i]);
+      }
+    }
+
+    if (text) {
+      element.innerHTML = text;
+    }
+
+    return element;
   },
-  addHeader: function(text) {
-    var header =  document.createElement('h5');
-    header.classList.add('text-sm-center');
-    header.innerHTML = text;
-    document.querySelector('.container').appendChild(header);
+
+  addElement: function (parentElem, element) {
+    document.querySelector(parentElem).appendChild(element);
   },
-  addForm: function() {
-    var form = document.createElement('form');
+
+  addContainer: function () {
+    document.body.insertBefore(this.createElement('div', 'container', null), document.body.firstChild);
+  },
+
+  addHeader: function () {
+    var header = this.createElement('h5', 'text-sm-center', 'Тест по программированию');
+
+    header.style.paddingTop = '20px';
+
+    this.addElement('.container', header);
+  },
+
+  addForm: function () {
+    var form = this.createElement('form', null, null);
+
     form.name = 'test';
     form.method = 'post';
-    document.querySelector('.container').appendChild(form);
+
+    this.addElement('.container', form);
   },
-  addList: function() {
-    var ol = document.createElement('ol');
-    document.querySelector('form').appendChild(ol);
+
+  addList: function () {
+    this.addElement('form', this.createElement('ol', null, null));
   },
-  addListItems: function(itemsNumber) {
-    var ol = document.querySelector('ol');
-    for (var i = 1; i < itemsNumber + 1; i++) {
-      var li = document.createElement('li');
-      li.innerHTML = 'Вопрос №' + i;
-      ol.appendChild(li);
+
+  addQuestions: function () {
+    for (var i = 0; i < this.questions.length; i++) {
+      this.addElement('ol', this.createElement('li', null, this.questions[i].text));
     }
   },
-  addCheckboxes: function(checkboxesNumber) {
+
+  addAnswers: function () {
     var li = document.querySelectorAll('li');
+
     for (var i = 0; i < li.length; i++) {
-      for (var j = 1; j < checkboxesNumber + 1; j++) {
-        var div = document.createElement('div'),
-            label = document.createElement('label'),
-            checkbox = document.createElement('input');
-        div.classList.add('checkbox');
-        li[i].appendChild(div);
-        label.innerHTML = ' Вариант ответа ' + j;
+
+      for (var j = 0; j < this.questions[i].answers.length; j++) {
+
+        var container = this.createElement('div', 'checkbox', null),
+          label = this.createElement('label', null, this.questions[i].answers[j].text),
+          checkbox = this.createElement('input', null, null);
+
         checkbox.type = 'checkbox';
-        checkbox.name = i + 1;
+        checkbox.name = i;
         checkbox.value = j;
-        div.appendChild(label);
-        label.insertBefore(checkbox, label.firstChild);
+        checkbox.style.marginRight = '5px';
+
+        li[i].appendChild(container).appendChild(label).insertBefore(checkbox, label.firstChild);
       }
     }
   },
-  addSubmit: function() {
-    var container = document.createElement('div'),
-        button = document.createElement('input');
-    container.classList.add('text-sm-center');
+
+  addSubmit: function () {
+    var container = this.createElement('div', 'text-sm-center', null),
+      button = this.createElement('input', 'btn btn-primary-outline', null);
+
     button.type = 'submit';
-    button.classList.add('btn', 'btn-primary-outline');
     button.value = 'Проверить мои результаты';
+
     document.querySelector('form').appendChild(container).appendChild(button);
   }
 };
 
-pageContent.addContainer();
-pageContent.addHeader('Тест по программированию');
-pageContent.addForm();
-pageContent.addList();
-pageContent.addListItems(3);
-pageContent.addCheckboxes(3);
-pageContent.addSubmit();
+Test.addContainer();
+Test.addHeader();
+Test.addForm();
+Test.addList();
+Test.addQuestions();
+Test.addAnswers();
+Test.addSubmit();
