@@ -3,8 +3,8 @@
 execute();
 
 function execute() {
-  var base= prompt('Enter base', ''),
-      exp = prompt('Enter exponent', '');
+  var base= +prompt('Enter base', ''),
+      exp = +prompt('Enter exponent', '');
 
   if ( isValidValue(base) && isValidValue(exp) ) {
     console.log( 'The result is ', pow(base,exp) );
@@ -20,13 +20,17 @@ function execute() {
 // Help functions
 
 function pow(base, exp) {
-  if ( exp == 0 && base == 0 ) {
+  if ( exp === 0 && base === 0 ) {
     return 1;
   }
 
   var result = base;
-  for (var i = 1; i < exp; i++) {
+  for (var i = 1; i < Math.abs(exp); i++) {
     result *= base;
+  }
+
+  if (exp < 0) {
+    return 1 / result;
   }
 
   return result;
