@@ -13,6 +13,9 @@ var start = document.getElementById('start'),
   secondsContainer = document.getElementById('seconds'),
   minutesContainer = document.getElementById('minutes'),
   hoursContainer = document.getElementById('hours'),
+  startTime = null,
+  stopTime = null,
+  stopDuration = 0,
   timer,
   ms = 1,
   sec = 1,
@@ -20,13 +23,22 @@ var start = document.getElementById('start'),
   h = 1;
 
 start.addEventListener('click', function () {
-  isStopped = false;
+  if(startTime == null)
+    startTime = new Date();
+
+
+  if (stopTime !== null)
+    stopDuration += (new Date - stopTime);
+
+  
   timer = window.setInterval(runCounter, 10);
   toggleHidden(start, stop);
+  isStopped = false;
   split.style.pointerEvents = 'auto';
 });
 
 stop.addEventListener('click', function () {
+  stopTime = new Date();
   clearInterval(timer);
   toggleHidden(stop, start);
   getCount('Stop', stopIndex);
@@ -46,6 +58,10 @@ reset.addEventListener('click', function () {
   clearInterval(timer);
   toggleHidden(stop, start);
   resetCounter();
+
+  stopDuration = 0;
+  startTime = null;
+  stopTime = null;
   split.style.pointerEvents = 'none';
   stopIndex = splitIndex = 1;
 });
@@ -80,56 +96,23 @@ function resetCounter() {
 }
 
 function runCounter() {
-  if (ms == 100) {
-    ms = 0;
-    countSeconds();
-  }
+  var currentTime = new Date(),
+    elapsedTime = new Date(currentTime - startTime - stopDuration);
 
-  switch (true) {
-    case (ms < 10):
-      msContainer.innerHTML = '0' + ms + '0';
-      break;
-    default:
-      msContainer.innerHTML = ms + '0';
-  }
+  ms = elapsedTime.getUTCMilliseconds();
+  sec = elapsedTime.getUTCSeconds();
+  min = elapsedTime.getUTCMinutes();
+  h = elapsedTime.getUTCHours();
 
-  ms++;
-}
-
-function countSeconds() {
-  if (sec > 59) {
-    sec = 0;
-    countMinutes();
-  }
-
+  msContainer.innerHTML = leadZero(ms, 3);
   secondsContainer.innerHTML = leadZero(sec, 2);
-
-  sec++;
-}
-
-function countMinutes() {
-  if (min > 59) {
-    min = 0;
-    countHours();
-  }
-
   minutesContainer.innerHTML = leadZero(min, 2);
-
-  min++;
-}
-
-function countHours() {
-  if (h > 23) {
-    h = 0;
-  }
-
   hoursContainer.innerHTML = leadZero(h, 2);
-
-  h++;
 }
 
 function leadZero(number, length) {
   var string = '' + number;
+
   while (string.length < length) {
     string = '0' + string;
   }
@@ -144,7 +127,8 @@ function toggleHidden(elem1, elem2) {
 }
 
 function getCurrentDate() {
-  var currentDate = new Date();
-  var currentDateContainer = document.querySelector('.present-day');
+  var currentDate = new Date(),
+    currentDateContainer = document.querySelector('.present-day');
+  
   currentDateContainer.innerHTML = currentDate.toDateString();
 }
