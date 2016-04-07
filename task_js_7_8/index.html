@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs and tooltips</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Dosis:300' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <ul class="tabs clearfix" role="tablist">
+            <li class="active">
+                <a role="tab" class="tab-link" href="#home">home</a>
+            </li>
+            <li>
+                <a role="tab" class="tab-link" href="#about">about</a>
+            </li>
+            <li>
+                <a role="tab" class="tab-link" href="#contacts">contacts</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab active" id="home">
+                The European languages are members of the same family. Their separate existence is a myth. For science,
+                music, sport, etc, Europe uses the same vocabulary.
+            </div>
+            <div role="tabpanel" class="tab" id="about">
+                The languages only differ in their grammar, their pronunciation and their most common words. Everyone
+                realizes why a new common language would be desirable: one could refuse to pay expensive translators.
+            </div>
+            <div role="tabpanel" class="tab" id="contacts">
+                <div class="form-container">
+                    <form method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="First Name" data-tooltip="first name" />
+                            <span class="tooltip">first name</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Last Name" data-tooltip="last name" />
+                            <span class="tooltip">last name</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Address" data-tooltip="address" />
+                            <span class="tooltip">address</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
