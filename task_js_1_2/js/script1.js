@@ -3,24 +3,23 @@
 execute();
 
 function execute() {
+
   var base= +prompt('Enter base', ''),
       exp = +prompt('Enter exponent', '');
 
-  if ( isValidValue(base) && isValidValue(exp) ) {
-    console.log( 'The result is ', pow(base,exp) );
+  if (base === 0 && exp < 0) {
+    askForConfirmation();
+  } else if (isValidValue(base) && isValidValue(exp)) {
+    console.log('The result is ', pow(base,exp));
   } else {
-    if ( window.confirm('You entered incorrect values. Do you want to try again?') ) {
-      execute();
-    } else {
-      alert('See ya!');
-    }
+    askForConfirmation();
   }
 }
 
 // Help functions
 
 function pow(base, exp) {
-  if ( exp === 0 && base === 0 ) {
+  if ( exp === 0 ) {
     return 1;
   }
 
@@ -37,9 +36,13 @@ function pow(base, exp) {
 }
 
 function isValidValue(n) {
-  if ( Boolean(n) && n % 1 === 0 ) {
-    return true;
-  }
+  return ( n % 1 === 0 );
+}
 
-  return false;
+function askForConfirmation() {
+  if (window.confirm('You entered incorrect values. Do you want to try again?')) {
+    execute();
+  } else {
+    alert('See ya!');
+  }
 }
