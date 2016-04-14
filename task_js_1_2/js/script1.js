@@ -4,13 +4,21 @@ execute();
 
 function execute() {
 
-  var base= +prompt('Enter base', ''),
-      exp = +prompt('Enter exponent', '');
+  var base= prompt('Enter base', ''),
+      exp = prompt('Enter exponent', '');
 
-  if (base === 0 && exp < 0) {
+  if (isCancelled(base) || isCancelled(exp)) {
     askForConfirmation();
-  } else if (isValidValue(base) && isValidValue(exp)) {
-    console.log('The result is ', pow(base,exp));
+
+  } else if(isEmptyString(base) || isEmptyString(exp)) {
+    askForConfirmation();
+
+  } else if (+base === 0 && +exp < 0) {
+    askForConfirmation();
+
+  } else if (isValidValue(+base) && isValidValue(+exp)) {
+    console.log('The result is ', pow(+base,+exp));
+    
   } else {
     askForConfirmation();
   }
@@ -19,7 +27,7 @@ function execute() {
 // Help functions
 
 function pow(base, exp) {
-  if ( exp === 0 ) {
+  if (exp === 0) {
     return 1;
   }
 
@@ -36,7 +44,15 @@ function pow(base, exp) {
 }
 
 function isValidValue(n) {
-  return ( n % 1 === 0 );
+  return (n % 1 === 0);
+}
+
+function isEmptyString(n) {
+  return (n.length === 0);
+}
+
+function isCancelled(n) {
+  return (n == null);
 }
 
 function askForConfirmation() {
