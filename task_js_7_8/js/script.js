@@ -4,15 +4,15 @@ $(function() {
 
   $('.tab-link').click(function(e) {
     var $this = $(this),
-      $currentTab = $this.attr('href');
+      currentTab = $this.attr('href');
 
     if (!($this).parent().hasClass('active')) {
 
-      $($this).parent().siblings('.active').removeClass('active');
-      $($this).parents('.tabs').siblings('.tab-content').find('.active').removeClass('active').hide();
+      $this.parent().siblings('.active').removeClass('active');
+      $this.closest('.tabs').siblings('.tab-content').find('.active').removeClass('active').hide();
 
-      $($this).parent().addClass('active');
-      $($currentTab).addClass('active').hide().fadeIn(500);
+      $this.parent().addClass('active');
+      $(currentTab).addClass('active').hide().fadeIn(500);
     }
 
     e.preventDefault();
