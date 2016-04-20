@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
+.twiddle {
+    width: 10000px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    left: 0;
+}
+
+.twiddle:before,
+.twiddle:after {
+    display: table;
+    content: "";
+}
+
+.twiddle:after {
+    clear: both;
+}
+
+.twiddle-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.twiddle-item {
+    float: left;
+}
+
+.twiddle-item img {
+    width: 100%;
+}
+
+.twiddle-controls {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.twiddle-nav {
+    display: inline-block;
+    padding: 0 20px;
+    font-family: Inconsolata, sans-serif;
+    font-size: 17px;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+}
+
+.twiddle-nav:hover {
+    color: #999;
+}
+
+.twiddle-left {
+    background: url(../img/arrow_left.png) no-repeat left 1px;
+}
+
+.twiddle-right {
+    background: url(../img/arrow_right.png) no-repeat right 1px;
+}

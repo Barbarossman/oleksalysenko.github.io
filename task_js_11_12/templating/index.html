@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Micro-Templating</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <script type="text-html" id="worksheet">
+        <div class="wrapper">
+            <h1><%= data.first_name, ' ', data.last_name %></h1>
+            <img src="<%= data.photo %>" alt="" />
+            <div class="section">
+                <p><%= data.occupation %></p>
+            </div>
+            <div class="section">
+                <p><%= data.motives.title %></p>
+                <ul>
+                    <% for (var i = 0; i < data.motives.content.length; i++) { %>
+                    <li><%= data.motives.content[i] %>
+                    <% }; %>
+                </ul>
+            </div>
+            <div class="section">
+                <p>
+                    <%= data.contacts.phone.title %>
+                    <span><%= data.contacts.phone.number %></span>
+                </p>
+                <p>
+                    <%= data.contacts.fb_profile.title %>
+                    <span>
+                        <a href="<%= data.contacts.fb_profile.link %>">
+                            <%= data.contacts.fb_profile.content %>
+                        </a>
+                    </span>
+                </p>
+            </div>
+            <div class="section">
+                <p><%= data.feedback.title %></p>
+                <p><%= data.feedback.content %></p>
+            </div>
+        </div>
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+
+h1 {
+    font-family: 'Satisfy', cursive;
+    color: #8e4585;
+}
+
+.wrapper {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
