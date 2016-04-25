@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<script id="template" type="text/x-handlebars-template">
+    <div class="container">
+        <h2>{{title}}</h2>
+        <ol>
+            {{#each questions}}
+            <li>
+                {{this.text}}
+                <img src="{{image}}"/>
+                {{#each this.answers}}
+                <div class="checkbox">
+                    <input type="checkbox" data-answer-index="{{@index}}" data-question-index="{{@../index}}"
+                           id="checkbox{{@../index}}_{{@index}}"/>
+                    <label for="checkbox{{@../index}}_{{@index}}">
+                        <span></span>
+                        {{this.text}}
+                    </label>
+                </div>
+                {{/each}}
+            </li>
+            {{/each}}
+        </ol>
+        <div class="text-center">
+            <button type="submit" class="btn submit-btn">{{submit}}</button>
+        </div>
+        <p class="source">Source: <a href="http://tutorialzine.com/2014/08/what-does-this-function-do/">tutorialzine</a>
+        </p>
+    </div>
+    <div class="modal" id="modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content text-center">
+                <span class="btn-close">х</span>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+@import url(https://fonts.googleapis.com/css?family=Catamaran:400,700);
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li {
+    margin-bottom: 40px;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+input,
+button,
+label {
+    cursor: pointer;
+}
+
+body {
+    font: 16px Catamaran, sans-serif;
+    font-weight: 400;
+    color: #363636;
+    background: #EEE0E5;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+img {
+    display: block;
+    max-width: 90%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D3D3D3;
+    border-radius: 2px;
+    margin: 15px 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 50px 0;
+    position: relative;
+}
+
+.btn {
+    padding: 6px 16px;
+    border: 2px solid #754C78;
+    background: transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #754C78;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    color: #fff;
+    background: #754C78;
+}
+
+.checkbox {
+    position: relative;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    bottom: 4px;
+    z-index: 1;
+}
+
+input[type=checkbox] + label span {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    border: 1px solid #754C78;
+    background: #fff;
+    position: relative;
+    bottom: -4px;
+}
+
+input[type=checkbox]:checked + label span.checked::after {
+    font-family: "FontAwesome";
+    content: "\f00c";
+    font-size: 17px;
+    color: #754C78;
+    position: absolute;
+    bottom: 0;
+}
+
+.source {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(1, 1, 1, .5);
+}
+
+.modal-dialog {
+    width: 40%;
+    margin: 25px auto;
+}
+
+.modal-content {
+    padding: 15px;
+    background: #f1f1f1;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.btn-close {
+    float: right;
+    padding: 0;
+    margin-top: -5px;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    color: #363636;
+    opacity: .5;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.btn-close:hover,
+.btn-close:focus {
+    opacity: 1;
+}
